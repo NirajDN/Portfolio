@@ -25,7 +25,7 @@ function Certificates() {
 
       <div className="max-w-7xl mx-auto px-4 relative">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.slice(0, 3).map((cert, index) => (
+          {certificates.slice(0, 3).map((cert) => (
             <SectionReveal key={cert.id} direction="up">
               <div className="group relative p-6 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md hover:border-red-600/50 transition-all duration-500 shadow-xl hover:shadow-red-600/10 h-full flex flex-col">
                 <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden bg-black/50">
@@ -38,7 +38,7 @@ function Certificates() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
                   <BsPatchCheckFill className="absolute bottom-4 right-4 text-red-500 w-8 h-8 drop-shadow-lg" />
                 </div>
-                
+
                 <div className="flex flex-col flex-1 gap-2">
                   <h3 className="text-xl font-bold text-white group-hover:text-red-400 transition-colors">
                     {cert.title}
