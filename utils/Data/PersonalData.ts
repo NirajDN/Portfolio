@@ -1,0 +1,25 @@
+export const personalData = {
+  name: "Niraj D Nillawar",
+  profile: "/pic.jpg",
+  designation: "MERN Stack Developer",
+  designationAlternateWords: [
+    "Developer.",
+    "Engineer.",
+    "Problem Solver.",
+    "Innovator.",
+  ],
+  description:
+    "I am Niraj D Nillawar, a passionate MERN Stack Developer and a B.Tech Computer Science student at Lovely Professional University. I specialize in building responsive, scalable full-stack web applications using React.js, Next.js, Node.js, and MongoDB. I have hands-on experience developing real-time applications and robust backend APIs. I am always eager to learn new technologies and contribute to open-source projects.",
+  email: "nirajnillawar@gmail.com",
+  phone: "+91-8379920453",
+  address: "Mumbai, Maharashtra",
+  github: "https://github.com/NirajDN",
+  facebook: "",
+  Instagram: "",
+  linkedIn: "https://www.linkedin.com/in/nirajdn/",
+  twitter: "",
+  stackOverflow: "",
+  devUsername: "NirajDN",
+  leetcode: "https://leetcode.com/NirajDN/",
+  resume: "/!CV.pdf",
+};
