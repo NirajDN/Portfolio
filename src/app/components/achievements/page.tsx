@@ -50,9 +50,7 @@ function Achievements() {
                   </div>
 
                   {/* Content Card */}
-                  <div
-                    className={`w-full md:w-1/2 md:text-left`}
-                  >
+                  <div className={`w-full md:w-1/2 md:text-left`}>
                     <div className="group relative p-8 rounded-3xl border border-white/10 bg-white/[0.02] backdrop-blur-md hover:border-red-600/50 transition-all duration-500 shadow-xl hover:shadow-red-600/10">
                       <div className="flex flex-col gap-4">
                         <div className="flex flex-col gap-1">
@@ -97,8 +95,18 @@ function Achievements() {
               <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
                 My Holopin Badges
               </h3>
-              <a href="https://holopin.io/@nirajdn" target="_blank" rel="noopener noreferrer" className="hover:scale-105 transition-transform duration-300">
-                <img src="https://holopin.me/nirajdn" alt="An image of @nirajdn's Holopin badges, which is a link to view their full Holopin profile" className="rounded-xl shadow-[0_0_30px_rgba(220,38,38,0.2)] border border-white/10" />
+              <a
+                href="https://holopin.io/@nirajdn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-105 transition-transform duration-300"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://holopin.me/nirajdn"
+                  alt="An image of @nirajdn's Holopin badges, which is a link to view their full Holopin profile"
+                  className="rounded-xl shadow-[0_0_30px_rgba(220,38,38,0.2)] border border-white/10"
+                />
               </a>
             </div>
           </SectionReveal>

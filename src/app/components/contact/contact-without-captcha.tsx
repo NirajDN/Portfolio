@@ -66,7 +66,7 @@ const ContactWithoutCaptcha = () => {
         toast.error("Failed to send message. Please try again.");
       }
       setIsLoading(false);
-    } catch (error: unknown) {
+    } catch {
       setIsLoading(false);
       toast.error("An unexpected error occurred.");
     }
