@@ -2,6 +2,7 @@
 import { certificates } from "@/../utils/Data/certificates";
 import { BsPatchCheckFill } from "react-icons/bs";
 import Image from "next/image";
+import Link from "next/link";
 import SectionReveal from "../SectionReveal";
 
 function Certificates() {
@@ -59,9 +60,15 @@ function Certificates() {
         </div>
 
         <div className="flex justify-center mt-12">
-          <button className="px-8 py-3 rounded-full border border-red-600 text-red-500 hover:bg-red-600 hover:text-white transition-all duration-300 font-semibold uppercase tracking-wider text-sm shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-            View More
-          </button>
+          <Link
+            href="https://www.linkedin.com/posts/nirajdn_2025-certificates-ugcPost-7438822009108824064-wW1q?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEgGNPAB9rNQ0yrcgC-xZWkAgkdJMhwDzzk"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="px-8 py-3 rounded-full border border-red-600 text-red-500 hover:bg-red-600 hover:text-white transition-all duration-300 font-semibold uppercase tracking-wider text-sm shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+              View More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

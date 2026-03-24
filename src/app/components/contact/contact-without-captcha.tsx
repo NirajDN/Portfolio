@@ -1,11 +1,11 @@
 "use client";
 
-import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import { TbMailForward } from "react-icons/tb";
 import { toast } from "react-toastify";
 import { isValidEmail } from "@/../utils/check-email";
 import { User, Mail, MessageSquare } from "lucide-react";
+import { personalData } from "@/../utils/Data/PersonalData";
 
 const ContactWithoutCaptcha = () => {
   const [input, setInput] = useState({
@@ -36,43 +36,39 @@ const ContactWithoutCaptcha = () => {
       setError({ ...error, required: false });
     }
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "";
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
-    const options = {
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "",
-    };
-
-    const templateParams = {
-      from_name: input.name,
-      email: input.email,
-      message: `${input.message} \nEmail: ${input.email}`,
-    };
-
     try {
       setIsLoading(true);
-      const res = await emailjs.send(
-        serviceID,
-        templateID,
-        templateParams,
-        options,
+
+      const res = await fetch(
+        `https://formsubmit.co/ajax/${personalData.email}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: input.name,
+            email: input.email,
+            message: input.message,
+          }),
+        },
       );
 
-      if (res.status === 200) {
+      if (res.ok) {
         toast.success("Message sent successfully!");
-        setIsLoading(false);
         setInput({
           name: "",
           email: "",
           message: "",
         });
+      } else {
+        toast.error("Failed to send message. Please try again.");
       }
+      setIsLoading(false);
     } catch (error: unknown) {
       setIsLoading(false);
-      if (error instanceof Error) {
-        toast.error(error.message);
-      } else {
-        toast.error("An unexpected error occurred.");
-      }
+      toast.error("An unexpected error occurred.");
     }
   };
 
@@ -98,7 +94,7 @@ const ContactWithoutCaptcha = () => {
             <input
               className="bg-white/5 w-full border border-white/10 rounded-2xl focus:border-red-500/50 focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600"
               type="text"
-              placeholder="John Doe"
+              placeholder="your name"
               maxLength={100}
               required={true}
               onChange={(e) => setInput({ ...input, name: e.target.value })}
@@ -116,7 +112,7 @@ const ContactWithoutCaptcha = () => {
             <input
               className={`bg-white/5 w-full border rounded-2xl focus:bg-white/10 ring-0 outline-0 transition-all duration-300 px-5 py-4 text-white placeholder:text-slate-600 ${error.email ? "border-red-500/50" : "border-white/10 focus:border-red-500/50"}`}
               type="email"
-              placeholder="john@example.com"
+              placeholder="yourname@gmail.com"
               maxLength={100}
               required={true}
               value={input.email}

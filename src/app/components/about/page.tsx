@@ -89,18 +89,26 @@ function About() {
             </div>
 
             <div className="flex flex-wrap gap-8 items-center mt-4">
-
               <div className="flex flex-col">
                 <span className="text-3xl font-black text-white">20+</span>
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-                  Global Projects
+                  Projects Built
                 </span>
               </div>
-              <div className="w-[1px] h-10 bg-white/10" />
+              <div className="w-[1px] h-10 bg-white/10 hidden lg:block" />
+
               <div className="flex flex-col">
-                <span className="text-3xl font-black text-white">10+</span>
+                <span className="text-3xl font-black text-white">2K+</span>
                 <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
-                  Tech Mastered
+                  GitHub Commits
+                </span>
+              </div>
+              <div className="w-[1px] h-10 bg-white/10 hidden sm:block" />
+
+              <div className="flex flex-col">
+                <span className="text-3xl font-black text-white">50+</span>
+                <span className="text-xs text-slate-500 uppercase tracking-widest font-bold">
+                  Pull Requests Merged
                 </span>
               </div>
             </div>
@@ -123,7 +131,7 @@ function About() {
 
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden border-2 border-white/10 shadow-[0_0_50px_rgba(239,68,68,0.15)] bg-[#050505]">
                   <Image
-                    src="/pic.jpg"
+                    src="/pic4.png"
                     fill
                     alt={personalData.name}
                     className="object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"

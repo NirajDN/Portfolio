@@ -1,9 +1,8 @@
 "use client";
 import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
-import { FaFacebook, FaStackOverflow } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
+import { SiLeetcode } from "react-icons/si";
 import { MdAlternateEmail } from "react-icons/md";
 import { personalData } from "@/../utils/Data/PersonalData";
 import ContactWithoutCaptcha from "./contact-without-captcha";
@@ -146,29 +145,19 @@ function ContactSection() {
                       color: "#0077b5",
                     },
                     {
-                      href: personalData.twitter,
-                      icon: FaXTwitter,
-                      color: "#1da1f2",
-                    },
-                    {
-                      href: personalData.stackOverflow,
-                      icon: FaStackOverflow,
-                      color: "#f48024",
-                    },
-                    {
-                      href: personalData.facebook,
-                      icon: FaFacebook,
-                      color: "#1877f2",
+                      href: personalData.leetcode,
+                      icon: SiLeetcode,
+                      color: "#f59e0b",
                     },
                   ].map((social, idx) => (
                     <Link
                       key={idx}
                       href={social.href}
                       target="_blank"
-                      className="w-14 h-14 rounded-2xl border border-white/5 bg-white/[0.02] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/20 hover:scale-110 transition-all duration-300"
+                      className="w-14 h-14 rounded-2xl border border-white/5 bg-white/[0.02] flex items-center justify-center hover:bg-white/[0.05] hover:border-white/20 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] transition-all duration-300 group"
                     >
                       <social.icon
-                        className="w-6 h-6"
+                        className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
                         style={{ color: social.color }}
                       />
                     </Link>

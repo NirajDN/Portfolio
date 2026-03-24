@@ -6,7 +6,6 @@ import { SplitText } from "gsap/dist/SplitText";
 import Link from "next/link";
 import { useRef } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
@@ -147,30 +146,23 @@ const HeroSection = () => {
               <Link
                 href={personalData.github}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] transition-all duration-300 shadow-xl"
               >
                 <BsGithub size={24} />
               </Link>
               <Link
                 href={personalData.linkedIn}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] transition-all duration-300 shadow-xl"
               >
                 <BsLinkedin size={24} />
               </Link>
               <Link
                 href={personalData.leetcode}
                 target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
+                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.6)] transition-all duration-300 shadow-xl"
               >
                 <SiLeetcode size={24} />
-              </Link>
-              <Link
-                href={personalData.twitter}
-                target="_blank"
-                className="social-icon p-3 rounded-xl bg-white/5 border border-white/10 text-white hover:text-red-500 hover:border-red-500/50 transition-all duration-300 shadow-xl"
-              >
-                <FaTwitterSquare size={24} />
               </Link>
             </div>
 
@@ -191,15 +183,8 @@ const HeroSection = () => {
                   e.preventDefault();
                   // Open in new tab to preview
                   window.open(personalData.resume, "_blank");
-                  // Trigger download
-                  const link = document.createElement("a");
-                  link.href = personalData.resume;
-                  link.download = "!CV.pdf";
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
                 }}
-                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2"
+                className="group px-8 py-4 rounded-2xl border border-white/10 bg-white/5 text-white font-bold uppercase tracking-wider transition-all hover:bg-white/10 hover:border-red-500/50 flex items-center gap-2 hover:scale-105"
               >
                 Get Resume{" "}
                 <MdDownload className="group-hover:translate-y-1 transition-transform" />

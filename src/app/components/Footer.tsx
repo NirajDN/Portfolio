@@ -81,30 +81,42 @@ const Footer = () => (
             <Link
               href={personalData.github}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-3 rounded-xl bg-white/5 hover:bg-red-500/10 hover:text-red-500 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300 border border-white/5 group"
             >
-              <FaGithub size={20} />
+              <FaGithub
+                size={20}
+                className="transition-transform duration-500 group-hover:rotate-[360deg]"
+              />
             </Link>
             <Link
               href={personalData.linkedIn}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-3 rounded-xl bg-white/5 hover:bg-red-500/10 hover:text-red-500 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300 border border-white/5 group"
             >
-              <FaLinkedin size={20} />
+              <FaLinkedin
+                size={20}
+                className="transition-transform duration-500 group-hover:rotate-[360deg]"
+              />
             </Link>
             <Link
               href={personalData.twitter}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-3 rounded-xl bg-white/5 hover:bg-red-500/10 hover:text-red-500 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300 border border-white/5 group"
             >
-              <FaTwitter size={20} />
+              <FaTwitter
+                size={20}
+                className="transition-transform duration-500 group-hover:rotate-[360deg]"
+              />
             </Link>
             <Link
               href={personalData.Instagram}
               target="_blank"
-              className="p-2 rounded-lg bg-white/5 hover:bg-red-500/10 hover:text-red-500 transition-all border border-white/5"
+              className="p-3 rounded-xl bg-white/5 hover:bg-red-500/10 hover:text-red-500 hover:scale-125 hover:-translate-y-2 hover:shadow-[0_0_20px_rgba(239,68,68,0.4)] transition-all duration-300 border border-white/5 group"
             >
-              <FaInstagram size={20} />
+              <FaInstagram
+                size={20}
+                className="transition-transform duration-500 group-hover:rotate-[360deg]"
+              />
             </Link>
           </div>
         </div>
