@@ -1,6 +1,5 @@
 <img width="1438" height="805" alt="Screenshot 2026-03-25 at 1 03 08 AM" src="https://github.com/user-attachments/assets/3640ac6d-f8bf-4f2a-bfa2-4c268a33e3ad" />
 # 🌐 Niraj D Nillawar - Developer Portfolio
-
 ## 🚀 Every portfolio tells a story… and this one is built with code, consistency, and curiosity.
 
 Welcome to my personal developer portfolio!  
